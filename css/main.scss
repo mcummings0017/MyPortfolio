@@ -36,15 +36,12 @@ body {
     background-color: #242943;
 }
 
-.nav-wrapper {
-    z-index: 10;
-    background-color: #242943;
-}
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     padding: 1.25em 0;
+    z-index: 10;
     span {
         color: var(--primary-color);
     }
@@ -59,7 +56,6 @@ body {
 }
 
 #banner {
-    background-color: #242943;
     align-items: center;
     display: flex;
     background-attachment: fixed;
@@ -72,7 +68,6 @@ body {
     max-height: 50em;
     min-height: 30em;
     position: relative;
-    z-index: 5;
 
     .major {
         margin-bottom: 2em;
@@ -95,7 +90,7 @@ body {
             width: auto;
         }
 
-        .major:after {
+        .major::after {
             content: '';
             background-color: #ffffff;
             display: block;
@@ -157,7 +152,7 @@ body {
     }
 }
 
-#banner:after {
+#banner::after {
     content: "";
     position: absolute;
     width: 110%;
@@ -190,12 +185,14 @@ body {
     .skill-logo-container {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 50%;
+        margin-right: 50px;
+        margin-left: 50px;
 
         img {
-            height: 50px;
-            width: 50px;
+            align-self: center;
+            height: 35px;
+            width: auto;
+            margin: 25px auto;
         }
     }
 }
