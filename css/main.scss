@@ -179,7 +179,7 @@ body {
 
 .skill-section {
     top: -4em;
-    border-bottom: solid black;
+    border-bottom: solid rgb(87, 84, 84);
 
     .skill-logo-container {
         display: flex;
@@ -195,15 +195,43 @@ body {
         }
     }
 }
-.about-container {
-    width: 100%;
-    height: 100%;
-}
 
-.city-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.about-section {
+    margin-top: 5em;
+
+    .about-container {
+        display: grid;
+        grid-template-columns: .7fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .city-img  {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .overlay-text {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        color: #fff;
+        padding: 6em;
+        font-size: .85em;
+        line-height: 1.7;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.2em;
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
