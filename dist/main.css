@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 :root {
   --primary-color: #007af3;
+  --bg-color: #242943;
 }
 
 * {
@@ -31,7 +32,7 @@ body {
 }
 
 .bg-major {
-  background-color: #242943;
+  background-color: var(--bg-color);
 }
 
 .nav-container {
@@ -92,7 +93,7 @@ body {
 
 #banner .inner .major::after {
   content: '';
-  background-color: #ffffff;
+  background-color: white;
   display: block;
   height: 2px;
   margin: 0.325em 0 0.5em 0;
@@ -204,7 +205,7 @@ body {
 }
 
 .about-section .city-img {
-  height: 100%;
+  height: 82%;
   width: 100%;
   object-fit: cover;
   grid-column: 1/3;
@@ -215,7 +216,7 @@ body {
   grid-column: 2/3;
   grid-row: 1/2;
   color: #fff;
-  padding: 6em;
+  padding: 2em;
   font-size: .85em;
   line-height: 1.7;
 }
@@ -229,6 +230,16 @@ body {
 .about-section p {
   font-size: 1.2em;
   text-align: center;
+}
+
+.project-section .placeholder-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.project-section .placeholder-container img {
+  background-color: var(--primary-color);
 }
 
 @media only screen and (min-width: 1025px) {

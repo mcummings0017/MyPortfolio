@@ -3,6 +3,7 @@
 
 :root {
     --primary-color: #007af3;
+    --bg-color: #242943;
 }
 
 * {
@@ -32,8 +33,9 @@ body {
     padding: 0 .5em;
 }
 
+// Nav section css start
 .bg-major {
-    background-color: #242943;
+    background-color: var(--bg-color);
 }
 
 
@@ -54,7 +56,9 @@ body {
 .primary-nav {
     display: none;
 }
+// Nav section css end
 
+// Hero section css start
 #banner {
     align-items: center;
     display: flex;
@@ -92,7 +96,7 @@ body {
 
         .major::after {
             content: '';
-            background-color: #ffffff;
+            background-color: white;
             display: block;
             height: 2px;
             margin: 0.325em 0 0.5em 0;
@@ -176,7 +180,9 @@ body {
     top: 0;
     width: 36px;
 }
+// Hero section css end
 
+// Skill section css start
 .skill-section {
     top: -4em;
     border-bottom: solid rgb(87, 84, 84);
@@ -195,7 +201,9 @@ body {
         }
     }
 }
+// Skill section css end
 
+// About Section css
 .about-section {
     margin-top: 5em;
 
@@ -206,7 +214,7 @@ body {
     }
     
     .city-img  {
-        height: 100%;
+        height: 82%;
         width: 100%;
         object-fit: cover;
         grid-column: 1/3;
@@ -217,7 +225,7 @@ body {
         grid-column: 2/3;
         grid-row: 1/2;
         color: #fff;
-        padding: 6em;
+        padding: 2em;
         font-size: .85em;
         line-height: 1.7;
     }
@@ -233,6 +241,22 @@ body {
         text-align: center;
     }
 }
+
+// About Section css end
+
+// Poroject Section css start
+.project-section {
+    .placeholder-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        img {
+            background-color: var(--primary-color);
+        }
+    }
+}
+// Project Section css end
 
 @media only screen and (min-width: 1025px) {
     .mobile-menu,
