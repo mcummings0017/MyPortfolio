@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 :root {
-    --primary-color: #007af3;
+    --primary-color: #41b671;
     --bg-color: #242943;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1750px;
     text-align: left;
     margin: 0px auto;
     padding: 0 .5em;
@@ -68,10 +68,10 @@ body {
     background-size: cover;
     border-bottom: 0 !important;
     cursor: default;
-    height: 75vh;
-    max-height: 50em;
+    height: 95vh;
     min-height: 30em;
     position: relative;
+    background-color: var(--bg-color);
 
     .major {
         margin-bottom: 2em;
@@ -206,15 +206,17 @@ body {
 // About Section css
 .about-section {
     margin-top: 5em;
+    margin-bottom: 5em;
 
     .about-container {
         display: grid;
         grid-template-columns: .7fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        height: 1000px;
     }
     
     .city-img  {
-        height: 82%;
+        height: 100%;
         width: 100%;
         object-fit: cover;
         grid-column: 1/3;
@@ -241,22 +243,60 @@ body {
         text-align: center;
     }
 }
-
 // About Section css end
 
-// Poroject Section css start
-.project-section {
-    .placeholder-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
 
-        img {
-            background-color: var(--primary-color);
+// Project Section css start
+.project-section {
+    background-color: var(--bg-color);
+
+    .container {
+        padding: 4em;
+    }
+
+    .project-head {
+        text-align: center;
+        color: white;
+
+        .project-title {
+            font-size: 4em;
         }
+    }
+
+    .project-subtitle {
+        font-weight: bold;
+        margin-bottom: 2em;
+        color: var(--primary-color);
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(467px, 1fr));
+    }
+
+    .project-item {
+        background-color: var(--primary-color);
+        overflow: hidden;
+    }
+
+    .project-img {
+        transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+        width: 100%;
+        height: 100%;
+    }
+
+    .project-img:hover {
+        transform: scale(1.2);
+        opacity: .75;
     }
 }
 // Project Section css end
+
+
+.footer {
+    margin-top: 50px;
+}
 
 @media only screen and (min-width: 1025px) {
     .mobile-menu,
